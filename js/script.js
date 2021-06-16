@@ -20,6 +20,14 @@ const colorArray = [
   "E",
   "F",
 ];
-button.addEventListener("click", switchColor);
+button.addEventListener("click", changeColor);
 
-function switchColor() {}
+function changeColor() {
+  let hexeCode = "#";
+
+  for (let i = 0; i < 6; i++) {
+    let random = Math.floor(Math.random() * colorArray.length);
+    hexeCode += colorArray[random];
+  }
+  body.style.backgroundColor = hexeCode;
+}
