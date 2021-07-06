@@ -31,3 +31,10 @@ function changeColor() {
   }
   body.style.backgroundColor = hexeCode;
 }
+
+function turnOnOff() {
+  let image = document.getElementById("Image");
+
+  if (image.src.match("ONbulb")) image.src = "image/OFFbulb.jpg";
+  else image.src = "image/ONbulb.jpg";
+}
